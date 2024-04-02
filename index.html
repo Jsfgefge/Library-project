@@ -3,26 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Document</title>
   </head>
   <body>
-    <div class="everything">
-        <div class="sidebar"></div>
-        <div class="main">
-          <div class="header">
-            <div class="me">Jsfgefge's Library</div>
-            <div class="side-btn">OwO</div>
-          </div>
-          <div class="content">
-            <div class="library"></div>
-            <div class="submit-books"></div>
-          </div>
-          <div class="footer">Copyright. Jsfgefge's Page</div>
+    <div class="main">
+      <div class="header">
+        <div>
+          <div>sidebar</div>
+          <div>Jsfgefge's Library</div>
         </div>
+        <div>OwO</div>
+      </div>
+      <div class="content">
+        <div class="container info">
+          <div>
+            <button type="button" id="btnNewBook">New Book</button>
+          </div>
+          <div class="library">hola</div>
+        </div>
+        <div class="container inputs">
+          <div>
+            <label for="bookName">Name:</label>
+            <input type="text" name="bookName" id="bookName" />
+          </div>
+          <div>
+            <label for="bookAuthor">Author:</label>
+            <input type="text" name="bookAuthor" id="bookAuthor" />
+          </div>
+          <div>
+            <label for="bookPages">Pages:</label>
+            <input type="text" name="bookPages" id="bookPages" />
+          </div>
+          <div>
+            <label for="bookSynopsis">Synopsis: </label>
+            <input type="text" name="bookSynopsis" id="bookSynopsis" />
+          </div>
+          <div>
+            <div>Available:</div>
+            <div>
+              <label for="rbtnSI">Si</label>
+              <input type="radio" name="isAvailable" id="rbtnSI" />
+              <label for="rbtnNo">No</label>
+              <input type="radio" name="isAvailable" id="rbtnNo" />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-
-    <script src="script.js"></script>
-    <script src="tests.js"></script>
+    <script src="script.js"></script> 
+    <script src="test.js"></script>
   </body>
 </html>
