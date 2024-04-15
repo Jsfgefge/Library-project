@@ -60,4 +60,18 @@ body{
     flex-grow: 1;
     padding: 25px;
     gap: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.book{
+    display: flex;
+    flex-direction: column;
+    background: #38DCE4;
+    border: 1px solid #2b7699;
+    border-radius: 5px;
+    color: #406A7B;
+    padding: 5px;
+    font-family: optima, sans-serif;
 }
