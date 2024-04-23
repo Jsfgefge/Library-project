@@ -99,3 +99,12 @@ body{
     height: 230px;
     flex-basis: 175px;
 }
+.book > button{
+  width: 75px;
+  align-self: end;
+  background-color: #FFF9F0;
+  border-radius: 3px;
+  border: 2px solid #EDF1F6;
+  font-size:15px;
+  font-weight: 500;
+}
