@@ -36,37 +36,39 @@
             </div>
           </div>
         </div>
-        <div class="container inputs">
-          <div>
-            <label for="bookName">Name:</label>
-            <input type="text" name="bookName" id="bookName" />
-          </div>
-          <div>
-            <label for="bookAuthor">Author:</label>
-            <input type="text" name="bookAuthor" id="bookAuthor" />
-          </div>
-          <div>
-            <label for="bookPages">Pages:</label>
-            <input type="text" name="bookPages" id="bookPages" />
-          </div>
-          <div>
-            <label for="bookSynopsis">Synopsis: </label>
-            <input type="text" name="bookSynopsis" id="bookSynopsis" />
-          </div>
-          <div>
-            <div>Available:</div>
+        <div class="container inputs" id="form">
+          <form action="">
             <div>
-              <label for="rbtnSI">Si</label>
-              <input type="radio" name="isAvailable" id="rbtnSI" />
-              <label for="rbtnNo">No</label>
-              <input type="radio" name="isAvailable" id="rbtnNo" />
+              <label for="bookName">Name:</label>
+              <input type="text" name="bookName" id="bookName" />
             </div>
-          </div>
+            <div>
+              <label for="bookAuthor">Author:</label>
+              <input type="text" name="bookAuthor" id="bookAuthor" />
+            </div>
+            <div>
+              <label for="bookPages">Pages:</label>
+              <input type="text" name="bookPages" id="bookPages" />
+            </div>
+            <div>
+              <label for="bookSynopsis">Synopsis: </label>
+              <input type="text" name="bookSynopsis" id="bookSynopsis" />
+            </div>
+            <div>
+              <div>Available:</div>
+              <div>
+                <label for="rbtnSI">Si</label>
+                <input type="radio" name="isAvailable" id="rbtnSI" />
+                <label for="rbtnNo">No</label>
+                <input type="radio" name="isAvailable" id="rbtnNo" />
+              </div>
+              <button type="submit" id="btnAddBook">Add Book</button>
+            </div>
+          </form>
         </div>
       </div>
     </div>
     <script src="script.js"></script> 
-    <script src="btnEvents.js"></script> 
-    <script src="test.js"></script>
+    <script src="btnEvents.js"></script>
   </body>
 </html>
