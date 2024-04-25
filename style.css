@@ -75,14 +75,24 @@ body{
     padding-left: 75px;
 }
 
+/* .library{ */
+/*     flex-grow: 0; */
+/*     padding: 25px; */
+/*     gap: 15px; */
+/*     overflow: auto; */
+/*     display: flex; */
+/*     flex-direction: row; */
+/*     flex-wrap: wrap; */
+/* } */
+
 .library{
-    flex-grow: 1;
-    padding: 25px;
-    gap: 15px;
-    overflow: auto;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+  display:grid;
+  grid-template:3fr/4fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 25px;
+  gap: 15px;
+  overflow: auto;
+
 }
 
 .book{
