@@ -31,17 +31,6 @@ function getAllBooks(library){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 const book1 = new Book("test1", "owo", "123",0);
 const book2 = new Book("test2", "uwu", "12qwe3",0);
 const book3 = new Book("test3", "awa", "12qwe3",0);
