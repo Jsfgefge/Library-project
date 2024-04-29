@@ -1,6 +1,7 @@
 let controlBooksId = [];
 let idCounter = 0;
 let myLibrary = [];
+let isReadValue;
 const btnDelete = document.querySelector("#btnDelete");
 const btnNewBook = document.querySelector("#btnNewBook");
 const btnAddBook = document.querySelector("#btnAddBook");
@@ -10,9 +11,16 @@ const inputs = document.querySelector(".container.inputs")
 const bookName = document.querySelector("#bookName");
 const bookAuthor = document.querySelector("#bookAuthor");
 const bookPages = document.querySelector("#bookPages");
-const bookSynopsis = document.querySelector("#bookSynopsis");
-// const isAvailible = document.querySelector("#isAvailible");
+const isRead = document.getElementsByName("isAvailable");
 
+function GetIsReadValue() {
+  for (let i = 0; i < isRead.length; i++) {
+    if (isRead[i].checked) {
+      isReadValue=parseInt(isRead[i].value);
+    }
+  }
+  console.log(isReadValue);
+}
 
 function Book (title, author, pagesNo, isRead)     {
     this.title = title;
@@ -29,7 +37,6 @@ function Book (title, author, pagesNo, isRead)     {
     this.info = function(){
         return this.title+", "+this.author+", "+this.pagesNo+", "+this.isRead(isRead)
     };
-
 }
 
 function addBookToLibrary(Name, Author, Pages, isAvailible){
@@ -44,6 +51,13 @@ function getAllBooks(library){
     }
 }
 
+function CreateBook() {
+  const book = document.createElement("div");
+  book.classList.add("book");
+  book.setAttribute("id","book"+idCounter);
+  library.appendChild(book);
+}
+
 function ShowHideInputs(){
   if(inputs.style.display === "flex"){
     inputs.style.display="none"; 
@@ -53,23 +67,14 @@ function ShowHideInputs(){
 }
 btnNewBook.addEventListener("click",ShowHideInputs);
 
-function CreateBook() {
-  const book = document.createElement("div");
-  book.classList.add("book");
-  book.setAttribute("id","book"+idCounter);
-  library.appendChild(book);
-}
 btnAddBook.addEventListener("click",CreateBook);
 btnAddBook.addEventListener("click",ShowHideInputs);
-btnAddBook.addEventListener("click",test);
+btnAddBook.addEventListener("click",GetIsReadValue);
 
-// btnAddBook.addEventListener("click",function() {
-//   const book = document.createElement("div");
-//   book.classList.add("book");
-//   book.setAttribute("id","book"+idCounter);
-//   library.appendChild(book);
-//   console.log("this works");
-// });
+btnAddBook.addEventListener("click",function() {
+  addBookToLibrary(bookName.value, bookAuthor.value, bookPages.value, isReadValue);  
+  getAllBooks(myLibrary);
+})
 
 btnDelete.addEventListener("click", function(){
     const child = document.getElementById("book1");
