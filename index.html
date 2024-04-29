@@ -10,8 +10,8 @@
     <div class="main">
       <div class="header">
         <div>
-          <div>sidebar</div>
-          <div>Jsfgefge's </div>
+          <!-- <div>sidebar</div> -->
+          <div>Jsfgefge's Library</div>
         </div>
         <div>
           <img src="./img/kitty-img-2.png" alt="kitty image">
@@ -23,21 +23,10 @@
             <button type="button" id="btnNewBook">New Book</button>
           </div>
           <div class="library">
-            <div class="book" id="book1"> 
-              <div class="book-info">
-                <p>Title: </p>
-                <p>Author: </p>
-                <p>Number of Pages: </p>
-                <p>Is read?</p>
-              </div>
-              <button id="btnDelete">
-                Delete
-              </button>      
-            </div>
           </div>
         </div>
         <div class="container inputs" id="form">
-          <form action="" method="post">
+          <form action="" method="post" id="newBookForm">
             <div>
               <label for="bookName">Name:</label>
               <input type="text" name="bookName" id="bookName" />
@@ -48,7 +37,7 @@
             </div>
             <div>
               <label for="bookPages">Pages:</label>
-              <input type="text" name="bookPages" id="bookPages" />
+              <input type="number" name="bookPages" id="bookPages" />
             </div>
             <div>
               <div>Available:</div>
@@ -58,13 +47,13 @@
                 <label for="rbtnNo">No</label>
                 <input type="radio" name="isAvailable" id="rbtnNo" value=0 />
               </div>
-              <button type="button" id="btnAddBook">Add Book</button>
             </div>
+            <button type="submit" id="btnAddBook">Add Book</button>
           </form>
         </div>
       </div>
     </div>
-    <script src="script.js"></script> 
+    <!-- <script src="script.js"></script>  -->
     <script src="btnEvents.js"></script>
   </body>
 </html>

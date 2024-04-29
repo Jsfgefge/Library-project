@@ -1,4 +1,4 @@
-*{border: 1px solid ;}
+/* *{border: 1px solid ;} */
 
 body{
     margin: 0 !important;
@@ -108,12 +108,18 @@ body{
     padding: 5px;
     font-family: optima, sans-serif;
     font-size: 18px;
-    height: 230px;
     flex-basis: 175px;
+    max-width: 209px;
 }
-.book > button{
+
+.book > .container{
+    flex-direction: row;
+    align-self: end;
+    gap:5px;
+}
+
+.book > .container > button{
   width: 75px;
-  align-self: end;
   background-color: #FFF9F0;
   border-radius: 3px;
   border: 2px solid #EDF1F6;
